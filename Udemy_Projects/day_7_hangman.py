@@ -1,27 +1,31 @@
-#Step 1
+# DAY 7 - HANGMAN
+# Run: python .\Udemy_Projects\day_7_hangman.py
+# Related: day_7_assets\hangman_art.py, day_7_assets\hangman_words.py
+
 import random
-import hangman_art
-from hangman_words import word_list
+
+from day_7_assets.hangman_art import logo, stages
+from day_7_assets.hangman_words import word_list
 
 chosen_word = random.choice(word_list)
 display = []
 lives = 6
 
-from hangman_art import logo
 print(logo)
 print("Let's play Hangman! I have a secret word. Guess it.")
-# print(f'Pssst, the solution is {chosen_word}.')
-for letter in chosen_word:
-    display.append("_")
-print(display)
+# print(f"Pssst, the solution is {chosen_word}.")
 
+for _ in chosen_word:
+    display.append("_")
+
+print(" ".join(display))
 
 end_of_game = False
 while not end_of_game:
     guess = input("Guess a letter: ").lower()
 
     if guess in display:
-        print(f"You have already guessed {guess}")
+        print(f"You have already guessed {guess}.")
 
     for position in range(len(chosen_word)):
         letter = chosen_word[position]
@@ -34,12 +38,12 @@ while not end_of_game:
         if lives == 0:
             end_of_game = True
             print("You lose!")
+            print(f"The chosen word is {chosen_word}.")
 
-    print(f"{' '.join(display)}")
+    print(" ".join(display))
+    print(stages[lives])
 
     if "_" not in display:
         end_of_game = True
         print("You win!")
 
-    from hangman_art import stages
-    print(stages[lives])
