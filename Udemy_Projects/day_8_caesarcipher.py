@@ -1,8 +1,15 @@
-from art import logo
+# DAY 8 - CAESAR CIPHER
+# Run: python .\Udemy_Projects\day_8_caesarcipher.py
+# Related: day_8_assets\art.py
 
-alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',\
-            'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',\
-            'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+from day_8_assets.art import logo
+
+alphabet = [
+    "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m",
+    "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z",
+    "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m",
+    "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z",
+]
 
 print(logo)
 
@@ -29,6 +36,6 @@ while should_continue:
     result = input("Type 'yes' if you want to go again. Otherwise type 'no'.\n")
     if result == "no":
         should_continue = False
-        print("Goodbye! Thank you for using my Caesar Cipher")
+        print("Goodbye! Thank you for using my Caesar Cipher.")
 
 
