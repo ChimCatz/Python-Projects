@@ -1,3 +1,7 @@
+# DAY 3 - TREASURE ISLAND
+# Run: python .\Udemy_Projects\day_3_treasureisland.py
+# Related: Udemy_Projects\ (no helper files yet)
+
 print('''
 *******************************************************************************
           |                   |                  |                     |
